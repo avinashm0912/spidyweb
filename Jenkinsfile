@@ -1,10 +1,15 @@
 pipeline {
     agent any
 
+    environment {
+        NETLIFY_SITE_ID = '53e09c9a-0419-488f-836a-b7f9cca9d32c'
+    }
+
     stages {
         stage('Hello') {
             steps {
                 echo 'Hello World'
+                echo "NETLIFY_SITE_ID: ${NETLIFY_SITE_ID}"
             }
         }
     }
