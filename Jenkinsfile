@@ -12,7 +12,7 @@ pipeline {
        always {
             // This will no longer fail the build when no tests exist
             junit (
-                //allowEmptyResults: true,
+                ///allowEmptyResults: true,
                 testResults: 'testing-results/junit.xml'
             )
         }
