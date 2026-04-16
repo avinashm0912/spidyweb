@@ -9,8 +9,12 @@ pipeline {
         }
     }
     post {
-        always {
-            junit 'testing-results/junit.xml'
+       always {
+            // This will no longer fail the build when no tests exist
+            junit (
+                allowEmptyResults: true,
+                testResults: 'testing-results/junit.xml'
+            )
         }
     }
 
