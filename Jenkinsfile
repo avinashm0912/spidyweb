@@ -15,6 +15,7 @@ pipeline {
                 allowEmptyResults: true,
                 testResults: 'testing-results/junit.xml'
             )
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, icon: '', keepAll: false, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
         }
     }
 
