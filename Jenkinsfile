@@ -8,4 +8,11 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            junit 'testing-results/*.xml'
+        }
+    }
+
+
 }
